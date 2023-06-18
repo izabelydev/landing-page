@@ -12,13 +12,16 @@
     justify-content: center;
 }
 
-.intro-text-content h2 {
-    margin-bottom: 3rem;
-    text-transform: uppercase;
-    line-height: 1.2;
-}
-
 .intro-img img {
     max-width: 100%;
     height: auto;
+}
+
+.top3-content {
+    max-width: 64rem;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
 }
