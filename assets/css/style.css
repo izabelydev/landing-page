@@ -1,4 +1,5 @@
-.inicio-content {
+.inicio-content,
+.contact-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
@@ -6,13 +7,16 @@
 }
 
 .inicio-text-content,
-.inicio-img {
+.inicio-img,
+.contact-text-content,
+.contact-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
 
-.inicio-img img {
+.inicio-img img,
+.contact-img  img {
     max-width: 100%;
     height: auto;
 }
@@ -21,7 +25,7 @@
 .pricing-content {
     max-width: 64rem;
     height: 100vh;
-    display: flex;
+    display: block;
     flex-flow: column wrap;
     justify-content: center;
     text-align: center;
@@ -84,4 +88,69 @@
 
 .gallery-img img:hover {
     transform: rotate(5deg) scale(1.2);
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-form .form-grid {
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--gap);
+}
+
+.form-grid h4 {
+    margin-bottom: 3rem;
+}
+
+.form-input-group {
+    flex: 1 1 32rem;
+}
+
+.form-input-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-input-group input,
+.form-input-group textarea {
+    border: none;
+    border-radius: 1rem;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+.form-input-group input:focus,
+.form-input-group textarea:focus {
+    box-shadow: 0 0 1rem var(--secondary-color);
+} 
+
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.form-input-group button {
+    padding: 1.5rem 2rem;
+    border: 0.2rem solid var(--white-color);
+    border-radius: 1rem;
+    background: transparent;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.form-input-group button:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+.form-input-group ::placeholder {
+    color: var(--font-light-gray-color);
+    font-family: 'Open Sans', sans-serif;
 }
