@@ -17,7 +17,8 @@
     height: auto;
 }
 
-.intro-content {
+.intro-content, 
+.pricing-content {
     max-width: 64rem;
     height: 100vh;
     display: flex;
