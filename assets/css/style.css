@@ -155,6 +155,26 @@ body .full-width {
     font-family: 'Open Sans', sans-serif;
 }
 
+.close-menu {
+    display: none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+    border: 0.04rem solid var(--white-color);
+}
+
 @media (max-width: 80rem) {
     .inicio-content, .grid {
         grid-template-columns: 1fr;
@@ -171,4 +191,43 @@ body .full-width {
         width: 100%;
     }
 
+    .menu {
+        bottom: 0;
+        text-align: center;
+        display: none;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .menu-content, .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 4rem;
+        line-height: 2.5rem;
+        text-align: center;
+        width: 4rem;
+        height: 3rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
 }

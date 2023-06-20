@@ -18,13 +18,15 @@
 </head>
 
 <body>
-    <aside class="menu white-bg ">
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <aside class="menu white-bg">
         <div class="main-content menu-content">
             <h1>
-                <a href="#inicio">Logo</a>
+                <a href="#inicio" onclick="getElementById('close-menu').checked = false;">Logo</a>
             </h1>
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#grid-top3">Top 3</a></li>
                     <li><a href="#gallery">Gallery</a></li>
@@ -35,7 +37,7 @@
             </nav>
         </div>
     </aside>
-    =
+    
     <section id="inicio" class="inicio main-bg section-height">
         <div class="main-content inicio-content">
             <div class="inicio-text-content">
@@ -245,6 +247,8 @@
             
         </div>
     </section>
+
+    <a href="#inicio" class="back-to-top">➤</a>
 </body>
 
 </html>
