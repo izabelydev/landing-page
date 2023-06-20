@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .inicio-text-content,
@@ -26,10 +26,12 @@
     text-align: center;
 }
 
-.top3-grid-content {
-    height: 100vh;
+.top3-grid-content,
+.gallery-grid-content,
+.work-grid-content {
+    min-height: 100vh;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
@@ -67,3 +69,18 @@
     /* rotação 5 graus */
 } 
 
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.gallery-img img {
+    transition: all .3s ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: rotate(5deg) scale(1.2);
+}
